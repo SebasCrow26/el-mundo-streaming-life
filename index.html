@@ -275,7 +275,7 @@
     .cat-line { flex: 1; height: 1px; background: var(--border); }
     .cat-badge { font-size: 0.68rem; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
 
-    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; }
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 
     .product-card {
       background: var(--card); border: 1px solid var(--border);
@@ -312,10 +312,7 @@
       clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%); overflow: hidden;
     }
     .yin-yang-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    .yin-yang-divider {
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 3px; height: 100%; background: rgba(255,255,255,0.18); z-index: 3;
-    }
+    .yin-yang-divider { display: none; }
 
     .product-info { padding: 15px; }
     .product-name { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2px; margin-bottom: 5px; line-height: 1.3; }
@@ -617,10 +614,10 @@
       <span class="cart-total-label">Total del pedido</span>
       <span class="cart-total-amount" id="cartTotal">$0</span>
     </div>
-    <a id="cartWhatsappBtn" href="#" class="cart-whatsapp-btn" target="_blank" rel="noopener">
-      💬 Pedir por WhatsApp
-    </a>
-    <p class="cart-note">Te contactaremos para coordinar el pago y entregarte tu acceso de inmediato.</p>
+    <button class="btn-primary" style="width:100%;padding:15px;font-size:0.95rem;border-radius:8px;" onclick="closeCart();">
+      Proceder al pago →
+    </button>
+    <p class="cart-note">Paga de forma segura directamente en nuestra plataforma.</p>
   </div>
 </div>
 
@@ -632,15 +629,14 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-section">
-    <div class="hero-tag">🎬 Tu tienda de streaming confiable en Colombia</div>
+    <div class="hero-tag">🎬 Tu tienda de streaming #1 en Colombia</div>
     <h1 class="hero-title">El Mundo<br><span class="red">Streaming</span> Life</h1>
     <p class="hero-subtitle">Entretenimiento sin límites</p>
     <p class="hero-desc">
-      Accede a Netflix, Disney+, Max, Amazon Prime y más plataformas al mejor precio. Entrega inmediata, soporte por WhatsApp y variedad de planes para todos.
+      Accede a Netflix, Disney+, Max, Amazon Prime y más plataformas al mejor precio. Entrega inmediata, pagos seguros y variedad de planes para todos.
     </p>
     <div class="hero-ctas">
       <a class="btn-primary" onclick="showPage('tienda')">Ver Catálogo Completo</a>
-      <a href="https://wa.me/573212277203" class="btn-secondary" target="_blank" rel="noopener">Contactar por WhatsApp</a>
     </div>
     <div class="platforms-strip">
       <span class="strip-label">Disponible en</span>
@@ -676,7 +672,7 @@
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
         <h3>Entrega Inmediata</h3>
-        <p>Recibes tu acceso al instante por WhatsApp. Sin esperas, sin complicaciones.</p>
+        <p>Recibes tu acceso al instante tras confirmar el pago. Sin esperas, sin complicaciones.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🛡️</div>
@@ -706,7 +702,7 @@
       <div class="step">
         <div class="step-num">3</div>
         <h4>¡Disfruta al instante!</h4>
-        <p>Nos contactas por WhatsApp, pagas y recibes tu acceso de inmediato.</p>
+        <p>Completas el pago en nuestra plataforma y recibes tu acceso de inmediato.</p>
       </div>
     </div>
   </div>
@@ -1179,8 +1175,8 @@
         <div class="saldo-step">
           <div class="saldo-step-num">2</div>
           <div>
-            <h4>Contáctanos por WhatsApp</h4>
-            <p>Envíanos un mensaje indicando cuánto quieres recargar y tu nombre o usuario. Te daremos los datos de pago disponibles.</p>
+            <h4>Inicia la recarga</h4>
+            <p>Indica cuánto quieres recargar desde tu cuenta. Próximamente podrás hacerlo directamente desde la plataforma.</p>
           </div>
         </div>
         <div class="saldo-step">
@@ -1194,7 +1190,7 @@
           <div class="saldo-step-num">4</div>
           <div>
             <h4>¡Saldo acreditado!</h4>
-            <p>En minutos verificamos tu pago y acreditamos el saldo en tu cuenta. Recibes confirmación por WhatsApp y ya puedes comprar.</p>
+            <p>En minutos verificamos tu pago y acreditamos el saldo en tu cuenta. Recibes confirmación en tu correo y ya puedes comprar.</p>
           </div>
         </div>
       </div>
@@ -1238,9 +1234,9 @@
 
     <div class="saldo-cta-box">
       <h3>¿Listo para recargar?</h3>
-      <p>Escríbenos por WhatsApp y en minutos tienes tu saldo listo para comprar todas las plataformas que quieras.</p>
-      <a href="https://wa.me/573212277203?text=Hola%2C%20quiero%20recargar%20saldo%20en%20mi%20cuenta" class="btn-whatsapp" target="_blank" rel="noopener">
-        💬 Recargar por WhatsApp
+      <p>Recarga tu saldo de forma segura y en minutos tendrás todo listo para comprar las plataformas que quieras.</p>
+      <a href="https://wa.me/573212277203?text=Hola%2C%20necesito%20ayuda%20con%20mi%20saldo" class="btn-whatsapp" target="_blank" rel="noopener">
+        💬 Contactar Soporte
       </a>
     </div>
 
@@ -1261,7 +1257,7 @@
   <div class="faq-hero">
     <div class="hero-tag" style="margin-bottom:20px;">❓ Preguntas Frecuentes</div>
     <h1>Preguntas Frecuentes</h1>
-    <p>Encuentra respuesta a las dudas más comunes. Si no encuentras lo que buscas, escríbenos por WhatsApp.</p>
+    <p>Encuentra respuesta a las dudas más comunes. Si no encuentras lo que buscas, contáctanos por soporte.</p>
   </div>
 
   <div class="faq-body">
@@ -1285,7 +1281,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Una vez confirmado tu pago, te enviamos el código o los datos de acceso directamente por WhatsApp. El proceso es inmediato en la mayoría de los casos. Con ese código puedes activar tu plan en la plataforma correspondiente.
+          Una vez confirmado tu pago, el código o acceso se entrega directamente en la plataforma, en tu correo registrado. El proceso es inmediato en la mayoría de los casos.
         </div>
       </div>
 
@@ -1295,7 +1291,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Depende del plan que compres. Cada plan indica en su descripción la duración del acceso. Puedes renovar cuando lo necesites contactándonos por WhatsApp.
+          Depende del plan que compres. Cada plan indica en su descripción la duración del acceso. Puedes renovar cuando lo necesites directamente desde la plataforma.
         </div>
       </div>
 
@@ -1319,7 +1315,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Aceptamos Nequi, transferencia bancaria (Bancolombia, Davivienda, etc.), Daviplata, PSE y efectivo (Efecty, Baloto). Si tienes dudas sobre tu método, escríbenos por WhatsApp y te confirmamos.
+          Aceptamos Nequi, transferencia bancaria (Bancolombia, Davivienda, etc.), Daviplata, PSE y efectivo (Efecty, Baloto). Si tienes dudas sobre tu método, contáctanos por soporte.
         </div>
       </div>
 
@@ -1339,7 +1335,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Una vez que envíes el comprobante de pago por WhatsApp, verificamos y acreditamos el saldo en menos de 15 minutos durante el horario de atención.
+          Una vez confirmado tu pago, verificamos y acreditamos el saldo en menos de 15 minutos durante el horario de atención.
         </div>
       </div>
 
@@ -1363,7 +1359,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          No es necesario. Puedes agregar productos al carrito y enviarnos tu pedido por WhatsApp sin necesidad de registrarte. El proceso es sencillo y rápido.
+          No es necesario. Puedes agregar productos al carrito y completar tu compra ingresando solo tu correo. El código llegará directo a tu bandeja de entrada.
         </div>
       </div>
 
@@ -1373,7 +1369,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Agrega los productos que quieres al carrito usando el botón "+". Luego abre el carrito y haz clic en "Pedir por WhatsApp". Te generamos automáticamente un mensaje con tu pedido completo para enviarnos por WhatsApp.
+          Agrega los productos que quieres al carrito usando el botón "+". Luego abre el carrito, haz clic en "Proceder al pago", ingresa tu correo y completa el pago. El código llega a tu correo automáticamente.
         </div>
       </div>
 
@@ -1397,7 +1393,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Contáctanos de inmediato por WhatsApp. Ofrecemos soporte postventa y si el problema es de nuestra parte, lo solucionamos sin costo adicional. Tu satisfacción es lo más importante.
+          Contáctanos de inmediato por el botón de soporte de WhatsApp. Ofrecemos soporte postventa y si el problema es de nuestra parte, lo solucionamos sin costo adicional.
         </div>
       </div>
 
@@ -1417,14 +1413,14 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          Si hay un problema comprobado de nuestra parte antes de entregar el acceso, hacemos el reembolso o cambiamos el producto. Escríbenos por WhatsApp para evaluar tu caso.
+          Si hay un problema comprobado de nuestra parte antes de entregar el acceso, hacemos el reembolso o cambiamos el producto. Contáctanos por soporte para evaluar tu caso.
         </div>
       </div>
     </div>
 
     <div class="faq-cta">
       <h3>¿Tienes más preguntas?</h3>
-      <p>Nuestro equipo está disponible por WhatsApp para resolver cualquier duda que tengas antes o después de tu compra.</p>
+      <p>Nuestro equipo de soporte está disponible para resolver cualquier duda que tengas antes o después de tu compra.</p>
       <a href="https://wa.me/573212277203?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20sus%20servicios" class="btn-whatsapp" target="_blank" rel="noopener">
         💬 Escribir por WhatsApp
       </a>
@@ -1515,13 +1511,7 @@
     itemsEl.innerHTML = html;
     totalEl.textContent = '$' + total.toLocaleString('es-CO');
 
-    // Build WhatsApp message
-    let msg = 'Hola! Quiero hacer el siguiente pedido:%0A%0A';
-    cart.forEach(item => {
-      msg += `▪ ${item.name} x${item.qty} — $${(item.price * item.qty).toLocaleString('es-CO')}%0A`;
-    });
-    msg += `%0A*Total: $${total.toLocaleString('es-CO')}*%0A%0A¿Cómo procedo con el pago?`;
-    document.getElementById('cartWhatsappBtn').href = 'https://wa.me/573212277203?text=' + msg;
+    // Cart total updated
   }
 
   function changeQty(idx, delta) {
